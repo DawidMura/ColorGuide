@@ -1,143 +1,35 @@
-header {
-  text-align: center;
+body {
+  background: linear-gradient(to right, rgba(255, 165, 0, 0.5), rgba(0, 90, 255, 0.5)), url("./zebra-seamless.jpg");
 }
 
-main {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-}
-main .color {
-  height: 100%;
-  width: 15rem;
-  margin: 0.5rem;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem 0.5rem;
-  border-bottom: 1px solid #dad9d4;
-  border-left: 1px solid #dad9d4;
-  border-right: 1px solid #dad9d4;
-}
-main .color .color-code {
-  font-size: 1.5rem;
-  margin-left: 2rem;
-  padding: 0.5rem;
-  width: 15rem;
-  font-family: "monospace";
-}
-main .color .color-first {
-  height: 9rem;
-  width: 15rem;
-  background-color: #ffc83f;
-}
-main .color .color-second {
-  height: 9rem;
-  width: 15rem;
-  background-color: #fa5e5b;
-}
-main .color .color-third {
-  height: 9rem;
-  width: 15rem;
-  background-color: #1d508d;
-}
-main .color .color-fourth {
-  height: 9rem;
-  width: 15rem;
-  background-color: #684e79;
+p {
+  color: #664200;
+  background-color: rgba(255, 219, 153, 0.75);
+  padding: 1rem;
 }
 
-.tints {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 2rem;
-}
-.tints .tint {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-  width: 15rem;
-  margin: 0.5rem;
-}
-.tints .tint_color {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-.tints .tint_color-1 {
-  height: 12rem;
-  width: 5rem;
-  background-color: #ffc83f;
-}
-.tints .tint_color-1-dark {
-  height: 12rem;
-  width: 5rem;
-  background-color: #ffb90c;
-}
-.tints .tint_color-1-light {
-  height: 12rem;
-  width: 5rem;
-  background-color: #fc8f8c;
-}
-.tints .tint_color-2 {
-  height: 12rem;
-  width: 5rem;
-  background-color: #fa5e5b;
-}
-.tints .tint_color-2-dark {
-  height: 12rem;
-  width: 5rem;
-  background-color: #f82d2a;
-}
-.tints .tint_color-2-light {
-  height: 12rem;
-  width: 5rem;
-  background-color: #fc8f8c;
-}
-.tints .tint_color-3 {
-  height: 12rem;
-  width: 5rem;
-  background-color: #1d508d;
-}
-.tints .tint_color-3-dark {
-  height: 12rem;
-  width: 5rem;
-  background-color: #143863;
-}
-.tints .tint_color-3-light {
-  height: 12rem;
-  width: 5rem;
-  background-color: #2668b7;
-}
-.tints .tint_color-4 {
-  height: 12rem;
-  width: 5rem;
-  background-color: #684e79;
-}
-.tints .tint_color-4-dark {
-  height: 12rem;
-  width: 5rem;
-  background-color: #4d3a5a;
-}
-.tints .tint_color-4-light {
-  height: 12rem;
-  width: 5rem;
-  background-color: #836298;
+.font-prime {
+  color: #664200;
 }
 
-@media screen and (min-width: 768px) {
-  main,
-.tints {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.back-prime {
+  background-color: #ffdb99;
+}
+
+.shadow {
+  box-shadow: 0.25rem 0.25rem 0.5rem #664200;
+}
+
+.font-contrast {
+  color: #002466;
+}
+
+.back-contrast {
+  background-color: #99bdff;
+}
+
+.shadow-contrast {
+  box-shadow: 0.25rem 0.25rem 0.5rem #002466;
 }
 
 /*# sourceMappingURL=main.css.map */
