@@ -1,0 +1,151 @@
+// Farbfunktionen
+@use "sass:color";
+
+header {
+  text-align: center;
+}
+
+$color-one: #ffc83f;
+$color-two: #fa5e5b;
+$color-three: #1d508d;
+$color-four: #684e79;
+$percent: 10%;
+$font-code: "monospace";
+
+@mixin border {
+  border-radius: 0.5rem 0.5rem;
+  border-bottom: 1px solid rgb(218, 217, 212);
+  border-left: 1px solid rgb(218, 217, 212);
+  border-right: 1px solid rgb(218, 217, 212);
+}
+
+@mixin color($bg-color) {
+  height: 9rem;
+  width: 15rem;
+  background-color: $bg-color;
+}
+@mixin flex-col {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+@mixin tints($bg-color) {
+  height: 12rem;
+  width: 5rem;
+  background-color: $bg-color;
+}
+
+main {
+  @include flex-col;
+  .color {
+    height: 100%;
+    width: 15rem;
+    margin: 0.5rem;
+    @include flex-col;
+    @include border;
+
+    .color-code {
+      font-size: 1.5rem;
+      margin-left: 2rem;
+      padding: 0.5rem;
+      width: 15rem;
+      font-family: $font-code;
+    }
+
+    .color-first {
+      @include color($color-one);
+    }
+
+    .color-second {
+      @include color($color-two);
+    }
+
+    .color-third {
+      @include color($color-three);
+    }
+
+    .color-fourth {
+      @include color($color-four);
+    }
+  }
+}
+.tints {
+  @include flex-col;
+  align-items: flex-start;
+  margin-top: 2rem;
+
+  .tint {
+    @include flex-col;
+    width: 15rem;
+    margin: 0.5rem;
+
+    &_color {
+      @include flex-row;
+
+      &-1 {
+        @include tints($color-one);
+      }
+
+      &-1-dark {
+        @include tints(darken($color-one, $percent));
+      }
+
+      &-1-light {
+        @include tints(lighten($color-two, $percent));
+      }
+
+      &-2 {
+        @include tints($color-two);
+      }
+
+      &-2-dark {
+        @include tints(darken($color-two, $percent));
+      }
+
+      &-2-light {
+        @include tints(lighten($color-two, $percent));
+      }
+
+      &-3 {
+        @include tints($color-three);
+      }
+
+      &-3-dark {
+        @include tints(darken($color-three, $percent));
+      }
+
+      &-3-light {
+        @include tints(lighten($color-three, $percent));
+      }
+
+      &-4 {
+        @include tints($color-four);
+      }
+
+      &-4-dark {
+        @include tints(darken($color-four, $percent));
+      }
+
+      &-4-light {
+        @include tints(lighten($color-four, $percent));
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main,
+  .tints {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
